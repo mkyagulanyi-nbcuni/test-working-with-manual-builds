@@ -5,6 +5,7 @@ on:
             username:
                 description: 'Provide username'
                 required: true
+    push:
 jobs:
     display-username:
         runs-on: 'ubuntu-latest'
