@@ -9,8 +9,6 @@ jobs:
     display-username:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout code
-               uses: actions/checkout@v3
             - name: 'Output username'
-               run: |
-                   echo ${{ github.event.inputs.username }}
+                run: |
+                    echo ${{ github.event.inputs.username }}
