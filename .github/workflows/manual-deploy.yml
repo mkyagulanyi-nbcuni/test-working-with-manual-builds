@@ -18,7 +18,7 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: 'Set repo name'
         id: create-branch-name
-        run:
+        run: |
           echo $GITHUB_OUTPUT
           echo branch-name=${{github.actor}}/${{ github.event.inputs.branch }} >> $GITHUB_OUTPUT
       - name: 'Print branch name'
