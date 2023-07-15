@@ -20,13 +20,13 @@ jobs:
         id: create-branch-name
         run: |
           echo $GITHUB_OUTPUT
-          echo branch-name=${{github.actor}}/${{ github.event.inputs.branch }} >> $GITHUB_OUTPUT
+          echo branch-name=refs/heads/${{ github.event.inputs.branch }} >> $GITHUB_OUTPUT
       - name: 'Print branch name'
         run: echo ${{ steps.create-branch-name.outputs.branch-name }}
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
-          ref: refs/heads/${{ github.event.inputs.branch }}
+          ref: ${{ github.event.inputs.branch }}
 
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
