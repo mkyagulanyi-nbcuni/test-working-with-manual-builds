@@ -21,3 +21,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Display environment
+        run: |
+          echo ${{ github.event.inputs.environment }}
+
