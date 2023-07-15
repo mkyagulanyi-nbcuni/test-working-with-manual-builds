@@ -1,10 +1,6 @@
 name: CI for Cash API
 on:
   workflow_dispatch:
-    inputs:
-      user-name:
-        description: 'Provide username'
-          required: true
 jobs:
   display-username:
     runs-on: ubuntu-latest
