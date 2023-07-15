@@ -1,6 +1,7 @@
 name: CI for Cash API
 on:
   workflow_dispatch:
+  push:
 jobs:
   display-username:
     runs-on: ubuntu-latest
