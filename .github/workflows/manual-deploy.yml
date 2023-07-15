@@ -20,6 +20,8 @@ jobs:
         id: create-branch-name
         run:
           echo "branch-name=${{github.actor}}/${{ github.event.inputs.branch }}" >> $GITHUB_OUTPUT
+      - name: 'Print branch name'
+        run: ${{ steps.create-branch-name.outputs.branch-name }}
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
