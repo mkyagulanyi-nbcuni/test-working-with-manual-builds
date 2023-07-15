@@ -8,7 +8,7 @@ on:
         required: true
       branch:
         description: 'Branch to checkout'
-          required: true
+        required: true
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
